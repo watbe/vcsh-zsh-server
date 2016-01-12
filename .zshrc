@@ -84,4 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ez="vim ~/.zshrc"
-alias sz "source ~/.zshrc"
+alias sz="source ~/.zshrc"
+
+alias enter="vcsh enter"
+
+# Override and extend via .zsh_local
+source $HOME/.zsh_local
