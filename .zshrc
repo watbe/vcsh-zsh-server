@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/ubuntu/.oh-my-zsh
+export ZSH=/home/ubuntu/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -93,6 +93,7 @@ alias enter="vcsh enter"
 alias e="exit"
 alias l="ls -lh"
 alias ll="ls -la"
+alias gg="git grep -i"
 
 # JUMP
 export MARKPATH=$HOME/.marks
@@ -113,6 +114,12 @@ reply=($(ls $MARKPATH))
 }
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
+
+function create_new_tmux_session {
+  tmux new-session -s $1
+}
+
+alias new-mux=create_new_tmux_session
 
 # Override and extend via .zsh_local
 source $HOME/.zsh_local
