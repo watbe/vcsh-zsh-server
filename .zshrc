@@ -56,6 +56,8 @@ plugins=(git git-extras python django pip bundler gem ruby virtualenv node npm)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export EDITOR="vim"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
