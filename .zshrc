@@ -53,7 +53,7 @@ plugins=(git git-extras python django pip bundler gem ruby virtualenv node npm)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -87,6 +87,30 @@ alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
 
 alias enter="vcsh enter"
+
+alias e="exit"
+alias l="ls -lh"
+alias ll="ls -la"
+
+# JUMP
+export MARKPATH=$HOME/.marks
+function jump {
+cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+}
+function unmark {
+rm -i $MARKPATH/$1
+}
+function marks {
+ls -l $MARKPATH | sed 's/ / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+function _completemarks {
+reply=($(ls $MARKPATH))
+}
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
 
 # Override and extend via .zsh_local
 source $HOME/.zsh_local
