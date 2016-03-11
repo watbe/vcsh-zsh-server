@@ -86,6 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ez="vim ~/.zshrc"
+alias ezl="vim ~/.zsh_local"
 alias sz="source ~/.zshrc"
 
 alias enter="vcsh enter"
@@ -93,7 +94,12 @@ alias enter="vcsh enter"
 alias e="exit"
 alias l="ls -lh"
 alias ll="ls -la"
+
+# Git Aliases
 alias gg="git grep -i"
+alias gc="git commit"
+alias gch="git checkout"
+alias gp="git push"
 
 # JUMP
 export MARKPATH=$HOME/.marks
