@@ -97,9 +97,12 @@ alias ll="ls -la"
 
 # Git Aliases
 alias gg="git grep -i"
-alias gc="git commit"
+alias gco="git commit"
 alias gch="git checkout"
-alias gp="git push"
+alias gchb="git checkout -b"
+alias gpl="git pull"
+alias gph="git push"
+alias grb="git rebase -i"
 
 # JUMP
 export MARKPATH=$HOME/.marks
