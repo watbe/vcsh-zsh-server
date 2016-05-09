@@ -57,6 +57,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR="vim"
+export TERM=xterm-256color
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,6 +104,10 @@ alias gchb="git checkout -b"
 alias gpl="git pull"
 alias gph="git push"
 alias grb="git rebase -i"
+alias gs="git status"
+alias gd="git diff HEAD"
+
+alias tmux="tmux -2"
 
 # JUMP
 export MARKPATH=$HOME/.marks
@@ -125,7 +130,7 @@ compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
 function create_new_tmux_session {
-  tmux new-session -s $1
+  tmux -2 new-session -s $1
 }
 
 alias new-mux=create_new_tmux_session
