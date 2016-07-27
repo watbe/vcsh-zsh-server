@@ -143,5 +143,11 @@ alias new-mux=create_new_tmux_session
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias vf=vim **
 
+# FZF use Ag and ignore gitignore stuff
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Override and extend via .zsh_local
 source $HOME/.zsh_local
+
+
