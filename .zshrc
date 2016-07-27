@@ -139,9 +139,9 @@ function create_new_tmux_session {
 
 alias new-mux=create_new_tmux_session
 
-# Override and extend via .zsh_local
-source $HOME/.zsh_local
-
 # https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias vf=vim **
+
+# Override and extend via .zsh_local
+source $HOME/.zsh_local
