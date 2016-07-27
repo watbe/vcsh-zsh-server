@@ -86,6 +86,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Permanently log commands in ~/.logs
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(fc -l -1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
+precmd() { eval "$PROMPT_COMMAND" }
+
 alias ez="vim ~/.zshrc"
 alias ezl="vim ~/.zsh_local"
 alias sz="source ~/.zshrc"
@@ -137,3 +141,7 @@ alias new-mux=create_new_tmux_session
 
 # Override and extend via .zsh_local
 source $HOME/.zsh_local
+
+# https://github.com/junegunn/fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias vf=vim **
