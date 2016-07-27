@@ -113,6 +113,8 @@ alias gd="git diff HEAD"
 
 alias tmux="tmux -2"
 
+alias :q="exit"
+
 # JUMP
 export MARKPATH=$HOME/.marks
 function jump {
