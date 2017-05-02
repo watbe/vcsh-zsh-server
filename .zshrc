@@ -110,6 +110,8 @@ alias gph="git push"
 alias grb="git rebase -i"
 alias gs="git status"
 alias gd="git diff HEAD"
+alias master="git checkout master"
+alias mgpl="git checkout master && git pull"
 
 alias tmux="tmux -2"
 
@@ -151,5 +153,3 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Override and extend via .zsh_local
 source $HOME/.zsh_local
-
-
