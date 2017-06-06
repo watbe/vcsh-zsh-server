@@ -141,7 +141,10 @@ function create_new_tmux_session {
   tmux -2 new-session -s $1
 }
 
+# tmux stuff
 alias new-mux=create_new_tmux_session
+alias w="tmux -2 attach -t wayne"
+alias b="tmux -2 attach -t background"
 
 # https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -153,3 +156,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Override and extend via .zsh_local
 source $HOME/.zsh_local
+
